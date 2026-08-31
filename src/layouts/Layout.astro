@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+const faviconUrl = `${baseUrl}favicon.svg`;
+
+const speakerSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Lauren Green",
+  description,
+  jobTitle: ["Nurse Leader", "Leadership Strategist", "Speaker", "Facilitator"],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#073c30" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/svg+xml" href={faviconUrl} />
+    <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(speakerSchema)} is:inline />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

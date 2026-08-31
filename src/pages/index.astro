@@ -1,0 +1,353 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const baseUrl = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+const assetUrl = (path: string) => `${baseUrl}${path}`;
+
+const topics = [
+  {
+    icon: "flag",
+    title: "Leading Under Pressure",
+    copy: "How exceptional leaders maintain clarity, confidence, and performance when the stakes are high.",
+  },
+  {
+    icon: "spark",
+    title: "Step Into Your Power",
+    copy: "Helping women recognize their influence, own their expertise, and lead boldly.",
+  },
+  {
+    icon: "lotus",
+    title: "Protecting Your Peace While Leading Well",
+    copy: "A practical conversation about boundaries, rest, resilience, and sustainable leadership.",
+  },
+  {
+    icon: "team",
+    title: "Building Teams People Want to Be Part Of",
+    copy: "Creating culture, connection, accountability, and the kind of leadership that makes people want to lean in.",
+  },
+  {
+    icon: "compass",
+    title: "The Art of Leadership",
+    copy: "Developing self-awareness, adaptability, communication, and the ability to lead different people through different seasons.",
+  },
+];
+
+const audiences = [
+  "Leadership Conferences",
+  "Women's Leadership Events",
+  "Healthcare Organizations",
+  "Professional Associations",
+  "Corporate Teams",
+  "Employee Resource Groups",
+  "Sororities & Service Organizations",
+  "Retreats",
+  "Universities",
+  "Executive Leadership Programs",
+];
+---
+
+<Layout
+  title="Lauren Green | Leadership Speaker"
+  description="Book Lauren Green for leadership keynotes, workshops, panels, and executive conversations."
+>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Lauren Green home">
+        <span class="monogram">LG</span>
+        <span class="brand-name">Lauren Green</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#topics">Topics</a>
+        <a href="#experience">Experience</a>
+        <a href="#audiences">Audiences</a>
+      </nav>
+
+      <a class="button button-gold header-cta" href="#book">Book Lauren</a>
+
+      <details class="mobile-menu">
+        <summary aria-label="Open navigation"><span></span><span></span><span></span></summary>
+        <nav aria-label="Mobile navigation">
+          <a href="#about">About</a>
+          <a href="#topics">Topics</a>
+          <a href="#experience">Experience</a>
+          <a href="#audiences">Audiences</a>
+          <a href="#book">Book Lauren</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Leadership strategist &amp; speaker</p>
+          <h1>
+            Leadership.
+            <span>Excellence.</span>
+            Impact.
+          </h1>
+          <p class="hero-script">Lead boldly. Leave a lasting impact.</p>
+          <p class="hero-role">Nurse Leader <i></i> Leadership Strategist <i></i> Speaker <i></i> Facilitator</p>
+          <p class="hero-intro">
+            Lauren Green equips leaders and teams with the confidence, clarity, and practical strategy to
+            lead well when it matters most.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#book">
+              Book Lauren for your next event
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="text-link" href="#topics">Explore speaking topics</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Lauren Green, leadership speaker">
+          <div class="hero-orbit hero-orbit-one"></div>
+          <div class="hero-orbit hero-orbit-two"></div>
+          <div class="hero-photo">
+            <img
+              src={assetUrl("images/lauren-hero.png")}
+              width="420"
+              height="520"
+              alt="Lauren Green smiling in a bright pink suit"
+              fetchpriority="high"
+            />
+          </div>
+          <div class="hero-badge">
+            <strong>15</strong>
+            <span>years of<br />leadership</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="shell about-grid">
+        <div class="portrait-wrap">
+          <div class="portrait-frame">
+            <img
+              src={assetUrl("images/lauren-speaking.png")}
+              width="285"
+              height="320"
+              alt="Lauren Green speaking on stage"
+              loading="lazy"
+            />
+          </div>
+          <svg class="floral-mark" viewBox="0 0 180 150" aria-hidden="true">
+            <path d="M24 137C44 88 75 55 128 24M40 108c-4-23-15-31-29-40 0 18 3 32 29 40Zm20-28C58 57 67 45 82 32c5 17 3 32-22 48Zm27-25c7-20 19-27 36-33-1 18-10 29-36 33ZM29 125c-17-10-26-8-39-5 12 14 23 19 39 5Z" />
+            <circle cx="128" cy="24" r="17" />
+          </svg>
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow">About Lauren</p>
+          <h2>Leadership experience.<br />Real-world impact.</h2>
+          <p>
+            Lauren Green is a dynamic leadership speaker and seasoned nurse executive who brings nearly 15
+            years of leadership experience spanning the U.S. Army Nurse Corps, major healthcare systems,
+            and the federal government.
+          </p>
+          <p>
+            Known for her ability to connect, challenge, and energize an audience, Lauren speaks from
+            experience - not theory. She has led teams through high-pressure environments, organizational
+            change, a global pandemic, and seasons of significant growth while helping emerging and
+            established leaders discover how to lead with greater confidence, clarity, and intention.
+          </p>
+          <p class="emphasis">
+            Her approach blends real-world leadership experience, relatable storytelling, practical
+            strategy, and a little personality to create conversations audiences remember long after the
+            session ends.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section topics" id="topics">
+      <div class="shell">
+        <div class="section-heading centered">
+          <p class="eyebrow">Signature speaking topics</p>
+          <h2>Timely topics. Real conversations.<br />Lasting impact.</h2>
+        </div>
+
+        <div class="topic-grid">
+          {
+            topics.map((topic) => (
+              <article class="topic-card">
+                <svg class="topic-icon" viewBox="0 0 64 64" aria-hidden="true">
+                  {topic.icon === "flag" && (
+                    <>
+                      <path d="M18 54 27 28l9 26M22 43h10M27 28V10m0 2h19l-5 7 5 7H27" />
+                    </>
+                  )}
+                  {topic.icon === "spark" && (
+                    <>
+                      <path d="m32 9 6 14 14 6-14 6-6 15-6-15-14-6 14-6 6-14ZM12 9l4 4m32-4-4 4M8 29H2m60 0h-6M13 50l4-4m34 4-5-4" />
+                    </>
+                  )}
+                  {topic.icon === "lotus" && (
+                    <>
+                      <path d="M32 53C17 45 13 31 16 21c8 2 13 6 16 12 3-6 8-10 16-12 3 10-1 24-16 32Zm0 0C26 35 25 21 32 9c7 12 6 26 0 44Zm0 0c-13-1-22-7-27-17 8-2 15 0 21 5m6 12c13-1 22-7 27-17-8-2-15 0-21 5" />
+                    </>
+                  )}
+                  {topic.icon === "team" && (
+                    <>
+                      <circle cx="32" cy="19" r="8" /><circle cx="13" cy="25" r="6" /><circle cx="51" cy="25" r="6" />
+                      <path d="M18 51v-8c0-7 6-12 14-12s14 5 14 12v8H18Zm-3-15C8 36 4 40 4 46v5h14m31-15c7 0 11 4 11 10v5H46" />
+                    </>
+                  )}
+                  {topic.icon === "compass" && (
+                    <>
+                      <circle cx="32" cy="32" r="24" /><path d="m40 23-5 12-12 6 6-13 11-5Zm-8-21v6m0 48v6M2 32h6m48 0h6" />
+                    </>
+                  )}
+                </svg>
+                <h3>{topic.title}</h3>
+                <p>{topic.copy}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <div class="shell experience-grid">
+        <div class="experience-copy">
+          <p class="eyebrow">From the boardroom to the big stage</p>
+          <h2>Trusted voice.<br />Proven experience.</h2>
+          <p>
+            Lauren has facilitated leadership development experiences and conversations for audiences
+            ranging from intimate executive teams to thousands of attendees, including moderating a
+            national mental health conversation before an audience of more than 5,000.
+          </p>
+          <p>
+            Whether delivering a keynote, facilitating a leadership workshop, moderating a panel, or
+            guiding an executive conversation, Lauren creates experiences designed to move people from
+            inspiration to action.
+          </p>
+        </div>
+        <div class="stage-photo">
+          <img
+            src={assetUrl("images/lauren-stage.png")}
+            width="490"
+            height="290"
+            alt="Lauren Green addressing a large conference audience"
+            loading="lazy"
+          />
+          <div class="stage-stat">
+            <strong>5,000+</strong>
+            <span>audience members reached in one conversation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section audiences" id="audiences">
+      <div class="shell">
+        <div class="section-heading centered">
+          <p class="eyebrow">Perfect for</p>
+          <h2>Conversations created for<br />leaders at every level.</h2>
+        </div>
+        <div class="audience-list" role="list">
+          {audiences.map((audience) => <span role="listitem">{audience}</span>)}
+        </div>
+      </div>
+    </section>
+
+    <section class="book-section" id="book">
+      <div class="shell book-grid">
+        <div class="book-intro">
+          <p class="eyebrow">Bring Lauren to your next event</p>
+          <h2>Let's create an experience your audience will remember.</h2>
+          <p>
+            Looking for a speaker who can command the room, connect with your audience, and leave them with
+            something they can actually use?
+          </p>
+          <p class="book-script">Let's work together.</p>
+          <div class="availability">
+            <span class="availability-dot"></span>
+            Booking inquiries coming soon
+          </div>
+        </div>
+
+        <div class="booking-card">
+          <div class="booking-heading">
+            <span>Booking inquiry</span>
+            <strong>Tell us about your event</strong>
+          </div>
+          <form aria-describedby="booking-note">
+            <div class="field-row">
+              <label>
+                First name
+                <input type="text" name="firstName" autocomplete="given-name" required />
+              </label>
+              <label>
+                Last name
+                <input type="text" name="lastName" autocomplete="family-name" required />
+              </label>
+            </div>
+            <div class="field-row">
+              <label>
+                Email
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+              <label>
+                Organization
+                <input type="text" name="organization" autocomplete="organization" />
+              </label>
+            </div>
+            <div class="field-row">
+              <label>
+                Event type
+                <select name="eventType" required>
+                  <option value="">Select an event type</option>
+                  <option>Keynote</option>
+                  <option>Leadership workshop</option>
+                  <option>Panel moderation</option>
+                  <option>Executive conversation</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label>
+                Event date
+                <input type="date" name="eventDate" />
+              </label>
+            </div>
+            <label>
+              Event details
+              <textarea
+                name="details"
+                rows="4"
+                placeholder="Share your audience, location, event goals, and what you would like Lauren to speak about."
+                required></textarea>
+            </label>
+            <button class="button button-primary form-button" type="submit" disabled>
+              Book Lauren
+            </button>
+            <p class="form-note" id="booking-note">
+              This form is ready for the approved booking destination. Submissions are not collected yet.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="monogram">LG</span>
+        <span class="brand-name">Lauren Green</span>
+      </a>
+      <p>Leadership. Excellence. Impact.</p>
+      <a href="#book">Book Lauren</a>
+    </div>
+  </footer>
+</Layout>
